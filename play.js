@@ -77,5 +77,17 @@ console.log(hobbies);
 // copy of the array
 const newHobbies = hobbies.slice();
 newHobbies.push("New Element");
-console.log("Old: ", hobbies);
 console.log("New: ", newHobbies);
+console.log("Old: ", hobbies);
+
+// copying array using spread operator
+const newHobbies2 = [...hobbies];
+newHobbies2.push("New Element");
+console.log("New: ", newHobbies2);
+console.log("Old: ", hobbies);
+
+//  rest operator
+const toArray = (...args) => {
+    return args;
+}
+console.log(toArray(1, 2, 3, 4, 5));
