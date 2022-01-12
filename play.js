@@ -25,3 +25,14 @@ console.log(summarizeUser(name, age, hasHobbies));
 
 // This will through an error because due to const variable we cannot change the value of the variable
 // hasHobbies = false;
+
+// Object
+const person = {
+    name: "Shubham", // property
+    age: 27, // property
+    greet() {
+        console.log(`Hi, I am ${this.name}`);
+    }
+}
+
+person.great();
