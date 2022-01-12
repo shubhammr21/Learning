@@ -1,4 +1,4 @@
-let name = "Shubham";
+/* let name = "Shubham";
 let age = 21;
 const hasHobbies = true;
 // function declaration
@@ -21,7 +21,7 @@ const summarizeUser2 = (userName, userAge, userHasHobbies) => {
 const summarizeUser = (userName, userAge, userHasHobbies) => `Name is ${userName}, age is ${userAge} and the user has hobbies: ${userHasHobbies}`;
 
 
-console.log(summarizeUser(name, age, hasHobbies));
+console.log(summarizeUser(name, age, hasHobbies)); */
 
 // This will through an error because due to const variable we cannot change the value of the variable
 // hasHobbies = false;
@@ -91,3 +91,31 @@ const toArray = (...args) => {
     return args;
 }
 console.log(toArray(1, 2, 3, 4, 5));
+
+// Destructuring Object
+const person2 = {
+    name: "Shubham",
+    age: 27,
+    greet() {
+        console.log(`Hi, I am ${this.name}`);
+    }
+}
+
+const {
+    name,
+    age
+} = person2;
+console.log(name, age);
+
+const printName = ({
+    name
+}) => {
+    console.log(name);
+}
+
+printName(person2);
+
+// Destructuring Array
+const hobbies2 = ["Sports", "Cooking"];
+const [hobby1, hobby2] = hobbies2;
+console.log(hobby1, hobby2);
