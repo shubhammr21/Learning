@@ -20,7 +20,19 @@ app.use((req, res, next) => {
 
 
 app.use(shopRoutes);
-app.use(adminRoutes);
+app.use('/admin', adminRoutes);
+
+
+// 404 not found handle
+app.use((req, res, next) => {
+    res.status(404).send('<h1>Page not found</h1>');
+})
+
+
+// 404 not found handle
+app.use((req, res, next) => {
+    res.status(404).send('<h1>Page not found</h1>');
+})
 
 
 app.listen(port, () => {
