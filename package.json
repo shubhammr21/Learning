@@ -1,0 +1,26 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "NodeJS learning",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhammr21/LearningNodeJs.git"
+  },
+  "author": "Shubham Maurya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubhammr21/LearningNodeJs/issues"
+  },
+  "homepage": "https://github.com/shubhammr21/LearningNodeJs#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
