@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+app.use(express.static(path.join(rootDir, 'public')));
 
 app.use((req, res, next) => {
     // console.log('Request received');
