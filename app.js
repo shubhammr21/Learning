@@ -4,6 +4,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const rootDir = require('./utils/path');
 
+app.set('view engine', 'pug');
+app.set('views', path.join(rootDir, 'views'));
+
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
@@ -22,13 +25,15 @@ app.use((req, res, next) => {
 })
 
 
-app.use(shopRoutes);
-app.use('/admin', adminRoutes);
+app.use('', shopRoutes);
+app.use('/admin', adminRoutes.router);
 
 
 // 404 not found handle
 app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(rootDir, 'views', '404.html'));
+    res.status(404).render('404', {
+        pageTitle: 'Page Not Found'
+    });
 })
 
 app.listen(port, () => {
